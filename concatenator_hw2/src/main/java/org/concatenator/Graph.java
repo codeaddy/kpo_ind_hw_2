@@ -7,9 +7,9 @@ import java.util.*;
  */
 public class Graph {
     private Integer vertexCount;
-    private HashMap<Integer, ArrayList<Integer>> dependencies;
-    private ArrayList<Integer> inDegree;
-    private ArrayList<Integer> parent;
+    private final HashMap<Integer, ArrayList<Integer>> dependencies;
+    private final ArrayList<Integer> inDegree;
+    private final ArrayList<Integer> parent;
 
     /**
      * Стандартный конструктор
@@ -25,7 +25,7 @@ public class Graph {
      * Метод добавляет новую вершину в граф
      */
     public void addVertex() {
-        dependencies.put(dependencies.size(), new ArrayList<Integer>());
+        dependencies.put(dependencies.size(), new ArrayList<>());
         inDegree.add(0);
         parent.add(-1);
         vertexCount++;

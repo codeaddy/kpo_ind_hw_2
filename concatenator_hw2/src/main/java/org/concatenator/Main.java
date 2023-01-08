@@ -1,8 +1,13 @@
 package org.concatenator;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Concatenator c = new Concatenator("test");
+        System.out.print("Enter rootpath: ");
+        Scanner scanner = new Scanner(System.in);
+        String rootPath = scanner.nextLine();
+        Concatenator c = new Concatenator(rootPath);
         System.out.println(c.collectResultString());
 //        System.out.println(System.getProperty("user.dir"));
     }
